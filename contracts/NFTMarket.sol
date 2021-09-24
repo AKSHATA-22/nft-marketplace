@@ -75,7 +75,6 @@ contract NFTMarket is ReentrancyGuard{
             false
             );
     }
-    // nonReentrant is called modifier
     /* Creates the sale of a marketplace item */
     /* Transfers ownership of the item, as well as funds between parties */
     function createMarketSale(
@@ -93,6 +92,9 @@ contract NFTMarket is ReentrancyGuard{
         _itemsSold.increment();
         payable(owner).transfer(listingPrice);
     }
+        
+    // nonReentrant is called modifier
+
 
     /* Returns all unsold market items */
     function fetchMarketItems() public view returns (MarketItem[] memory) {
