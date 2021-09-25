@@ -95,6 +95,7 @@ contract NFTMarket is ReentrancyGuard{
         
     // nonReentrant is called modifier
 
+
     /* Returns all unsold market items */
     function fetchMarketItems() public view returns (MarketItem[] memory) {
         uint itemCount = _itemIds.current();
@@ -113,7 +114,11 @@ contract NFTMarket is ReentrancyGuard{
         return items;
     }
 
+<<<<<<< HEAD
     /* Returns only items that a user has purchased */
+=======
+    /* Returns onlyl items that a user has purchased */
+>>>>>>> 8589aeaafc173940a666d378817733633a0171d0
     function fetchMyNFTs() public view returns (MarketItem[] memory) {
         uint totalItemCount = _itemIds.current();
         uint itemCount = 0;
