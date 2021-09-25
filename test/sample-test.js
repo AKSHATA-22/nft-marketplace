@@ -16,7 +16,7 @@ describe("NFTMarket", function () {
     let listingPrice = await market.getListingPrice()
     listingPrice = listingPrice.toString()
 
-    const auctionPrice = ethers.utils.parseUnits('1', 'ether')
+    const auctionPrice = ethers.utils.parseUnits('100', 'ether')
 
     await nft.createToken("https://www.mytokenlocation.com")
     await nft.createToken("https://www.mytokenlocation2.com")
